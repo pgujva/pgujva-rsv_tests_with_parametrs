@@ -23,7 +23,7 @@ public class testConfig {
     System.setProperty("remote.web.driver", "http://127.0.0.1:4444/wd/hub");
     String remoteWebDriver = System.getProperty("remote.web.driver");
     System.out.println(remoteWebDriver);
-    if (remoteWebDriver != null {
+    if (remoteWebDriver != null) {
       Configuration.remote = remoteWebDriver;
     }
   }
