@@ -20,22 +20,22 @@ public class BaseSteps {
 
   @BeforeAll
   static void setUp() {
-    //System.setProperty("selenide.browser", "firefox");
+    System.setProperty("selenide.browser", "chrome");
     Configuration.startMaximized = true;
     addListener("AllureSelenide", new AllureSelenide());
-    /*DesiredCapabilities capabilities = new DesiredCapabilities();
+    DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("browserName", "safari");
     capabilities.setCapability("browserVersion", "13.0");
     capabilities.setCapability("enableVNC", true);
     Configuration.browserCapabilities = capabilities;
-    Configuration.remote = "http://127.0.0.1:4444/wd/hub";*/
+    Configuration.remote = "http://127.0.0.1:4444/wd/hub";
   }
 
   @AfterEach
   void afterEach() {
     attachScreenshot("Last screenshot");
     attachPageSource();
-    attachAsText("Browser console logs", getConsoleLogs());
+    //attachAsText("Browser console logs", getConsoleLogs());
     closeWebDriver();
   }
 
