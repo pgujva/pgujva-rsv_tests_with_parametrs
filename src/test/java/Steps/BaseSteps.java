@@ -22,7 +22,7 @@ public class BaseSteps {
 
   @BeforeAll
   static void setUp() {
-    //System.setProperty("selenide.browser", "firefox");
+    System.setProperty("selenide.browser", System.getProperty("browserName"));
     //SelenideBrowser = System.getProperty("selenide.browser");
     Configuration.startMaximized = true;
     addListener("AllureSelenide", new AllureSelenide());
