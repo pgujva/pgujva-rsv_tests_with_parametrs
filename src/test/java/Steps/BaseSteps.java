@@ -42,9 +42,9 @@ public class BaseSteps {
   void afterEach() {
     attachScreenshot("Last screenshot");
     attachPageSource();
-    if (System.getProperty("browserName").equals("chrome") || System.getProperty("selenide.browser").equals("chrome")) {
-      attachAsText("Browser console logs", getConsoleLogs());
-    }
+   // if (System.getProperty("browserName").equals("chrome") || System.getProperty("selenide.browser").equals("chrome")) {
+   //   attachAsText("Browser console logs", getConsoleLogs());
+   // }
     closeWebDriver();
   }
 
