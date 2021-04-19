@@ -42,7 +42,7 @@ public class BaseSteps {
   void afterEach() {
     attachScreenshot("Last screenshot");
     attachPageSource();
-    if (remoteWebDriver.equals("chrome") || SelenideBrowser.equals("chrome")) {
+    if (System.getProperty("browserName").equals("chrome") || System.getProperty("selenide.browser").equals("chrome")) {
       attachAsText("Browser console logs", getConsoleLogs());
     }
     closeWebDriver();
