@@ -17,7 +17,7 @@ import static helpers.AttachmentHelper.*;
 
 public class BaseSteps {
   private final static String BASE_URL = "https://rsv-test.bizml.ru/";
-  private static String SelenideBrowser;
+ // private static String SelenideBrowser;
   private static String remoteWebDriver;
 
   @BeforeAll
@@ -41,9 +41,9 @@ public class BaseSteps {
   void afterEach() {
     attachScreenshot("Last screenshot");
     attachPageSource();
-   if (System.getProperty("browserName").equals("chrome") || System.getProperty("selenide.browser").equals("chrome")) {
-   attachAsText("Browser console logs", getConsoleLogs());
-   }
+    if (System.getProperty("browserName").equals("chrome") || System.getProperty("selenide.browser").equals("chrome")) {
+      attachAsText("Browser console logs", getConsoleLogs());
+    }
     closeWebDriver();
   }
 
