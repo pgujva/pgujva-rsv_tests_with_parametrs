@@ -22,13 +22,13 @@ public class BaseSteps {
 
   @BeforeAll
   static void setUp() {
-    System.setProperty("selenide.browser", "firefox");
-    SelenideBrowser = System.getProperty("selenide.browser");
+    //System.setProperty("selenide.browser", "firefox");
+    //SelenideBrowser = System.getProperty("selenide.browser");
     Configuration.startMaximized = true;
     addListener("AllureSelenide", new AllureSelenide());
     DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("browserName", "firefox");
-    capabilities.setCapability("browserVersion", "87.0");
+    capabilities.setCapability("browserName", System.getProperty("browserName"));
+    capabilities.setCapability("browserVersion", System.getProperty("browserVersion"));
     capabilities.setCapability("enableVNC", true);
     System.setProperty("remote.web.driver", "http://127.0.0.1:4444/wd/hub");
     remoteWebDriver = System.getProperty("remote.web.driver");
