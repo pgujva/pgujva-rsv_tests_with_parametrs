@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
 public class testConfig {
-  @BeforeAll
+/*  @BeforeAll
   static void setUp() {
     //System.setProperty("selenide.browser", "firefox");
     Configuration.startMaximized = true;
@@ -31,8 +31,8 @@ public class testConfig {
   @Test
   public void testCong() {
     open("https://rsv-test.bizml.ru/");
-    /*System.setProperty("selenide.browser", "chrome");
+    *//*System.setProperty("selenide.browser", "chrome");
     String remoteWebDriver = System.getProperty("selenide.browser");
-    System.out.println(remoteWebDriver);*/
-  }
+    System.out.println(remoteWebDriver);*//*
+  }*/
 }
