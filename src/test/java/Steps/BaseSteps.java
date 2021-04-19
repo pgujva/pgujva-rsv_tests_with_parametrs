@@ -30,6 +30,7 @@ public class BaseSteps {
     capabilities.setCapability("browserName", System.getProperty("browserName"));
     capabilities.setCapability("browserVersion", System.getProperty("browserVersion"));
     capabilities.setCapability("enableVNC", true);
+    Configuration.browserCapabilities = capabilities;
     System.setProperty("remote.web.driver", "http://127.0.0.1:4444/wd/hub");
     remoteWebDriver = System.getProperty("remote.web.driver");
     if (remoteWebDriver != null) {
