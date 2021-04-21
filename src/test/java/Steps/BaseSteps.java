@@ -22,10 +22,12 @@ public class BaseSteps {
 
   @BeforeAll
   static void setUp() {
+    //Запуск браузера локально в selenide
     //System.setProperty("selenide.browser", System.getProperty("browserName"));
     //SelenideBrowser = System.getProperty("selenide.browser");
     Configuration.startMaximized = true;
     addListener("AllureSelenide", new AllureSelenide());
+    //Запуск браузера в контейнере selenoid
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("browserName", System.getProperty("browserName"));
     capabilities.setCapability("browserVersion", System.getProperty("browserVersion"));
