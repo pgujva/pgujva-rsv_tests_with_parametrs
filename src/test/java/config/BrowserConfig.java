@@ -1,7 +1,7 @@
 package config;
 
 import org.aeonbits.owner.Config;
-@Config.Sources({"classpath:browser.config/firefox.properties"})
+@Config.Sources({"classpath:browser.config/default.properties"})
 public interface BrowserConfig extends Config {
 
   @Key("browser.name")
